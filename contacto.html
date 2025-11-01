@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AgendaPro · Contacto</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Principal">
+      <a class="brand" href="index.html">AgendaPro</a>
+      <ul class="nav-menu">
+        <li><a href="citas.html">Citas</a></li>
+        <li><a href="panel.html">Panel</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container narrow" role="main">
+    <h1>Contacto</h1>
+    <form id="form-contacto" class="card" novalidate>
+      <div class="field">
+        <label for="c-nombre">Nombre</label>
+        <input id="c-nombre" required />
+      </div>
+      <div class="field">
+        <label for="c-email">Correo</label>
+        <input id="c-email" type="email" required />
+      </div>
+      <div class="field">
+        <label for="c-mensaje">Mensaje</label>
+        <textarea id="c-mensaje" rows="4" required></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Enviar</button>
+      <p class="muted">Te responderemos pronto.</p>
+    </form>
+  </main>
+
+  <footer class="site-footer"><small>&copy; <span id="anio"></span> AgendaPro</small></footer>
+
+  <script type="module" src="js/main.js" defer></script>
+  <script type="module" src="js/validators.js" defer></script>
+</body>
+</html>

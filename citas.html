@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AgendaPro · Citas</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/pages/citas.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Principal">
+      <a class="brand" href="index.html">AgendaPro</a>
+      <ul class="nav-menu">
+        <li><a href="panel.html">Panel</a></li>
+        <li><a href="horarios.html">Horarios</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" role="main">
+    <h1>Agenda tu cita</h1>
+
+    <section class="grid-2">
+      <div class="card" aria-label="Calendario">
+        <header class="card-header">
+          <h2>Disponibilidad</h2>
+          <div class="actions">
+            <button id="btn-prev" class="btn btn-ghost" aria-label="Semana anterior">&larr;</button>
+            <button id="btn-next" class="btn btn-ghost" aria-label="Semana siguiente">&rarr;</button>
+          </div>
+        </header>
+        <div id="calendario" class="calendar">
+          <!-- Render de slots por JS -->
+        </div>
+      </div>
+
+      <aside class="card" aria-label="Formulario de reserva">
+        <h2>Reserva</h2>
+        <form id="form-cita" novalidate>
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" required />
+          </div>
+          <div class="field">
+            <label for="correo">Correo</label>
+            <input id="correo" name="correo" type="email" required />
+          </div>
+          <div class="field">
+            <label for="motivo">Motivo</label>
+            <textarea id="motivo" name="motivo" rows="3" required></textarea>
+          </div>
+          <input id="slot-seleccionado" name="slot" type="hidden" />
+          <button class="btn btn-primary" type="submit">Confirmar</button>
+          <p class="muted">Recibirás un correo de confirmación (simulado).</p>
+        </form>
+      </aside>
+    </section>
+
+    <section class="card" aria-label="Resumen">
+      <h2>Resumen de reservas</h2>
+      <div id="resumen" class="table-responsive">
+        <!-- Tabla por JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><small>&copy; <span id="anio"></span> AgendaPro</small></footer>
+
+  <script type="module" src="js/main.js" defer></script>
+  <script type="module" src="js/utils.js" defer></script>
+  <script type="module" src="js/dom.js" defer></script>
+  <script type="module" src="js/state.js" defer></script>
+  <script type="module" src="js/calendar.js" defer></script>
+  <script type="module" src="js/appointments.js" defer></script>
+</body>
+</html>

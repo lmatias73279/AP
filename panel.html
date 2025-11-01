@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AgendaPro · Panel del profesional</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/panel.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Principal">
+      <a class="brand" href="index.html">AgendaPro</a>
+      <ul class="nav-menu">
+        <li><a href="horarios.html">Horarios</a></li>
+        <li><a href="citas.html">Citas</a></li>
+        <li><button id="btn-logout" class="btn btn-outline btn-sm">Salir</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" role="main">
+    <h1>Panel</h1>
+
+    <section class="grid-3" aria-label="Tarjetas de estado">
+      <article class="card stat">
+        <h2>Próximas</h2>
+        <p><strong id="stat-proximas">0</strong> citas</p>
+      </article>
+      <article class="card stat">
+        <h2>Canceladas</h2>
+        <p><strong id="stat-canceladas">0</strong> citas</p>
+      </article>
+      <article class="card stat">
+        <h2>Completadas</h2>
+        <p><strong id="stat-completadas">0</strong> citas</p>
+      </article>
+    </section>
+
+    <section class="card" aria-label="Listado de citas">
+      <header class="card-header">
+        <h2>Agenda de la semana</h2>
+        <div class="actions">
+          <input id="buscador" type="search" placeholder="Buscar por nombre o estado…" aria-label="Buscar">
+        </div>
+      </header>
+      <div id="lista-citas" class="table-responsive" role="table" aria-label="Citas">
+        <!-- tabla renderizada por JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><small>&copy; <span id="anio"></span> AgendaPro</small></footer>
+
+  <script type="module" src="js/main.js" defer></script>
+  <script type="module" src="js/dom.js" defer></script>
+  <script type="module" src="js/utils.js" defer></script>
+  <script type="module" src="js/state.js" defer></script>
+  <script type="module" src="js/appointments.js" defer></script>
+</body>
+</html>

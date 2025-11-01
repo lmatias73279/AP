@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AgendaPro · Inicio</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <nav class="navbar" aria-label="Principal">
+      <a class="brand" href="index.html" aria-current="page">AgendaPro</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menú</button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="citas.html">Agendar</a></li>
+        <li><a href="panel.html">Panel</a></li>
+        <li><a href="horarios.html">Horarios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li class="sep"></li>
+        <li><a href="login.html" class="btn btn-primary btn-sm">Iniciar sesión</a></li>
+        <li><a href="registro.html" class="btn btn-outline btn-sm">Crear cuenta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido" class="container" role="main">
+    <section class="hero" aria-labelledby="titulo-hero">
+      <h1 id="titulo-hero">Gestiona tus citas de forma simple</h1>
+      <p>Configura tu disponibilidad, comparte tu enlace y recibe reservas con confirmación automática.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="citas.html">Reservar ahora</a>
+        <a class="btn btn-secondary" href="registro.html">Soy profesional</a>
+      </div>
+    </section>
+
+    <section class="features grid-3" aria-label="Beneficios">
+      <article class="card">
+        <h2>Disponibilidad semanal</h2>
+        <p>Define bloques de tiempo y olvídate del caos de agenda.</p>
+      </article>
+      <article class="card">
+        <h2>Recordatorios</h2>
+        <p>Envío de correos automáticos de confirmación (mock en desarrollo).</p>
+      </article>
+      <article class="card">
+        <h2>Reportes básicos</h2>
+        <p>Visualiza citas próximas, canceladas y completadas en tu panel.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <small>&copy; <span id="anio"></span> AgendaPro · Proyecto académico</small>
+    <nav aria-label="Legal">
+      <a href="404.html">Términos</a>
+      <a href="404.html">Privacidad</a>
+    </nav>
+  </footer>
+
+  <script type="module" src="js/main.js" defer></script>
+  <script type="module" src="js/events.js" defer></script>
+</body>
+</html>

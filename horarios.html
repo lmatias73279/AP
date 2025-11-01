@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AgendaPro · Horarios</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/pages/horarios.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Principal">
+      <a class="brand" href="index.html">AgendaPro</a>
+      <ul class="nav-menu">
+        <li><a href="panel.html">Panel</a></li>
+        <li><a href="citas.html">Citas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" role="main">
+    <h1>Disponibilidad semanal</h1>
+    <form id="form-horarios" class="card" aria-describedby="ayuda-horarios">
+      <div class="grid-2">
+        <div class="field">
+          <label for="duracion">Duración de cada cita (min)</label>
+          <input id="duracion" type="number" min="15" step="15" value="60" required />
+        </div>
+        <div class="field">
+          <label for="rango">Rango horario (ej. 08:00–18:00)</label>
+          <input id="rango" type="text" placeholder="08:00-18:00" required />
+        </div>
+      </div>
+
+      <fieldset>
+        <legend>Bloques por día</legend>
+        <div id="slots" class="slots-grid">
+          <!-- JS generará checkboxes/inputs por día -->
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button class="btn btn-primary" type="submit">Guardar</button>
+        <button id="btn-generar" class="btn btn-secondary" type="button">Generar semana</button>
+      </div>
+      <p id="ayuda-horarios" class="muted">Los bloques se replican automáticamente cada semana.</p>
+    </form>
+  </main>
+
+  <footer class="site-footer"><small>&copy; <span id="anio"></span> AgendaPro</small></footer>
+
+  <script type="module" src="js/main.js" defer></script>
+  <script type="module" src="js/utils.js" defer></script>
+  <script type="module" src="js/state.js" defer></script>
+  <script type="module" src="js/calendar.js" defer></script>
+  <script type="module" src="js/schedule.js" defer></script>
+</body>
+</html>
