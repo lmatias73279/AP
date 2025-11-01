@@ -1,0 +1,18 @@
+.form .form-control:focus {
+  box-shadow: 0 0 0 4px var(--focus-ring);
+  border-color: var(--color-primary);
+}
+
+.hint, .form-text { color: var(--color-muted); font-size: .85rem; }
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-strong);
+  border-color: var(--color-primary-strong);
+}
+
+.input-error { border-color: #c2410c; box-shadow: 0 0 0 4px rgba(194,65,12,0.08); }

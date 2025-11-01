@@ -1,0 +1,14 @@
+#form-horarios fieldset {
+  border: 1px dashed var(--color-border);
+  border-radius: .5rem;
+  padding: 1rem;
+}
+.slots-grid {
+  display: grid;
+  gap: .75rem;
+}
+@media (min-width: 768px) {
+  .slots-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

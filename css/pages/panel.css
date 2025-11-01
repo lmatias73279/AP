@@ -1,0 +1,7 @@
+#buscador {
+  min-width: 240px;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f8fafc;
+}

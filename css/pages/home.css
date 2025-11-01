@@ -1,0 +1,7 @@
+.features .card {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.features .card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
