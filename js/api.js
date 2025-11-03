@@ -1,3 +1,45 @@
+import { allAppointments, createAppointment, updateAppointment, deleteAppointment, findBySlot } from './appointments.js';
+import { generateWeekSlots } from './schedule.js';
+
+const delay = (ms = 150) => new Promise((res) => setTimeout(res, ms));
+
+export async function fetchAppointments() {
+  await delay(180);
+  return allAppointments();
+}
+
+export async function createAppointmentAPI(data) {
+  await delay(220);
+  if (findBySlot(data.slot)) {
+    const err = new Error('Slot already booked');
+    err.code = 'SLOT_TAKEN';
+    throw err;
+  }
+  return createAppointment(data);
+}
+
+export async function updateAppointmentAPI(id, patch) {
+  await delay(160);
+  return updateAppointment(id, patch);
+}
+
+export async function deleteAppointmentAPI(id) {
+  await delay(120);
+  return deleteAppointment(id);
+}
+
+export async function fetchSlots(options = {}) {
+  await delay(140);
+  return generateWeekSlots(new Date(), options);
+}
+
+export default {
+  fetchAppointments,
+  createAppointmentAPI,
+  updateAppointmentAPI,
+  deleteAppointmentAPI,
+  fetchSlots,
+};
 import { allAppointments, createAppointment, deleteAppointment, findBySlot } from './appointments.js';
 import { generateWeekSlots } from './schedule.js';
 
